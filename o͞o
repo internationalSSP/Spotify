@@ -1,1 +1,24 @@
 open.spotify.com/album/5MEPQ517mY86sQwf92C9QQ
+
+
+curl -X POST \
+     --fail \
+     -F token=TOKEN \
+     -F ref=REF_NAME \
+     https://gitlab.com/api/v4/projects/43531348/trigger/pipeline
+
+
+script:
+  - "curl -X POST --fail -F token=TOKEN -F ref=REF_NAME https://gitlab.com/api/v4/projects/43531348/trigger/pipeline"
+
+
+https://gitlab.com/api/v4/projects/43531348/ref/REF_NAME/trigger/pipeline?token=TOKEN
+
+curl -X POST \
+     --fail \
+     -F token=TOKEN \
+     -F "ref=REF_NAME" \
+     -F "variables[RUN_NIGHTLY_BUILD]=true" \
+     https://gitlab.com/api/v4/projects/43531348/trigger/pipeline
+
+https://gitlab.com/api/v4/projects/43531348/ref/REF_NAME/trigger/pipeline?token=TOKEN&variables[RUN_NIGHTLY_BUILD]=true
