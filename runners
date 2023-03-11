@@ -1,0 +1,5 @@
+GET /runners
+GET /runners/all
+GET /runners/:id/jobs
+GET /projects/:id/runners
+GET /groups/:id/runners
